@@ -1,0 +1,47 @@
+1. 폰켓몬
+import java.util.*;
+
+class Solution {
+    public int solution(int[] nums) {
+        
+        int answer = nums.length / 2;
+        System.out.println(answer);
+        
+        Set<Integer> hs = new HashSet<Integer>();
+        
+        for (int i=0; i < nums.length; i++) {
+            hs.add(nums[i]);
+        }
+        
+        int duplTypeNum = hs.size();
+        
+        System.out.println(duplTypeNum);
+        
+        if (duplTypeNum <= answer) {
+            return duplTypeNum;
+        } else {
+            return answer;
+        }
+        
+    }
+}
+2.완주하지 않은 선수
+흠... 너무 무겁다..흠흠힘
+import java.util.*;
+class Solution {
+    public String solution(String[] participant, String[] completion) {
+        //배열 정렬
+        Arrays.sort(participant);
+        Arrays.sort(completion);
+        int i;
+        
+        for ( i=0; i<completion.length; i++){
+            System.out.println(participant[i]);
+            System.out.println(completion[i]);
+            if (!participant[i].equals(completion[i])){
+                return participant[i];
+            }
+        }
+        return participant[i];
+    }
+}
